@@ -57,7 +57,7 @@ turtle2 = turtle.Turtle()
 turtle3 = turtle.Turtle()
 turtle1.shape("circle")
 turtle2.shape("circle")
-turtle3.shape("circleg")
+turtle3.shape("circle")
 
 
 
