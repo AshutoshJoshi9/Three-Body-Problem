@@ -47,9 +47,9 @@ def Distance(px1, px2, py1, py2):
 
 
 #Initialising system
-b1 = Body(5.97219*pow(10, 24), 0, 5, 0, 0)
-b2 = Body(5.97219*pow(10, 24), 4.3301, -2.5, 0, 0)
-b3 = Body(5.97219*pow(10, 24), -4.3301, -2.5, 0, 0)
+b1 = Body(5.97219*pow(10, 24), 0, 50, 0, 0)
+b2 = Body(5.97219*pow(10, 24), 0, -50, 0, 0)
+b3 = Body(1*pow(10, 24), -4.3301, -2.5, 0, 0)
 
 turtle.bgcolor("black")
 turtle1 = turtle.Turtle()
@@ -62,7 +62,7 @@ turtle3.shape("circle")
 
 
 #Simulation
-for i in range(100):
+for i in range(1000):
     d12 = Distance(b1.px, b2.px, b1.py, b2.py)
     d23 = Distance(b2.px, b3.px, b2.py, b3.py)
     d13 = Distance(b1.px, b3.px, b1.py, b3.py)
@@ -85,6 +85,7 @@ for i in range(100):
 
 
 #Drawing trajectory
-    Trajectory(turtle1, b1.px, b1.py, 'blue', b1.mass / (max(b1.mass, b2.mass, b3.mass)))
-    Trajectory(turtle2, b2.px, b2.py, 'red', b2.mass / (max(b1.mass, b2.mass, b3.mass)))
-    Trajectory(turtle3, b3.px, b3.py, 'green', b3.mass / (max(b1.mass, b2.mass, b3.mass)))
+    Trajectory(turtle1, b1.px, b1.py, 'blue', 3*b1.mass / (max(b1.mass, b2.mass, b3.mass)))
+    Trajectory(turtle2, b2.px, b2.py, 'red', 3*b2.mass / (max(b1.mass, b2.mass, b3.mass)))
+    Trajectory(turtle3, b3.px, b3.py, 'green', 3*b3.mass / (max(b1.mass, b2.mass, b3.mass)))
+
